@@ -18,13 +18,44 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
-    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/no-var-requires": 0,
     "react/react-in-jsx-scope": "off",
     "camelcase": "error",
-    "spaced-comment": "error",
-    "quotes": ["error", "single"],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "line": {
+          "markers": [
+            "/"
+          ],
+          "exceptions": [
+            "-",
+            "+"
+          ]
+        },
+        "block": {
+          "markers": [
+            "!"
+          ],
+          "exceptions": [
+            "*"
+          ],
+          "balanced": true
+        }
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "no-duplicate-imports": "error"
   },
   "settings": {
