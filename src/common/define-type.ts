@@ -28,7 +28,7 @@ export type Placement =
   | 'rightBottom'
 export interface TooltipPropsIcon {
   title: string
-  placement?: Placement
+  placement: Placement
 }
 export interface PropsIcon extends Props {
   name?: IconName
